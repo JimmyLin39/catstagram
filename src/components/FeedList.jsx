@@ -14,9 +14,14 @@ import FeedItem from './FeedItem';
 
 class FeedList extends React.Component {
   render() {
+    const { photos } = this.props.data
+    console.log(photos);
+    const feedItems = photos.map(photo => (
+      <FeedItem photo={photo} key={photo.id}/>
+    ))
     return (
       <div className="FeedList">
-        <FeedItem />
+        { feedItems }
       </div>
     )
   }

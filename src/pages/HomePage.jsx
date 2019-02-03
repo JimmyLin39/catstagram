@@ -25,7 +25,7 @@ class HomePage extends React.Component {
     return (
       <div className="HomePage">
         <ImageUploaderForm />
-        <FeedList />
+        <FeedList data = {data}/>
       </div>
     )
   }
